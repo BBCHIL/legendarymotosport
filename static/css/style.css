@@ -1,0 +1,210 @@
+body {
+    background: url("/static/img/body_background.png");
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn_ {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    background-color: #eb0b0b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* terms of use and other stuff */
+.jew-info {
+    color: grey;
+    opacity: 0.5;
+    font-size: xx-small;
+}
+
+/* NAV SETTINGS */
+.nav-top {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    justify-content: space-between;
+    /*! font-size: 20px; */
+}
+
+/* HAMBURGER MENU SETTINGS */
+
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+}
+
+.menu__arrow {
+    color: white;
+}
+
+.menu__box {
+    display: none;
+    flex-direction: column;
+}
+
+#menu__toggle:not(:checked) ~ .menu__btn > span {
+    transform: rotate(0deg);
+    transition-duration: 0.5s;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
+#menu__toggle:checked ~ .menu__box {
+    display: flex;
+    animation: show-box-menu 1s, 1;
+    transition-duration: 1s;
+}
+
+@keyframes show-box-menu{
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* END HAMBURGER MENU SETTINGS */
+
+.nav-top__user-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.nav-top ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-size: x-large;
+}
+
+.nav-top__element {
+    float: left;
+}
+
+.nav-top__link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+
+.nav-top__username {
+    font-size: x-large  ;
+    color: white;
+    padding-left: 2px;
+}
+
+.nav-top a:hover {
+    background-color: #111;
+}
+
+.nav-top__user-image {
+    max-height: 69px;
+}
+/* END NAV SETTINGS */
+
+
+/* HEADER SETTINGS */
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__image-big {
+    border-bottom: 2px solid #851311;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__image-small {
+    border-bottom: 2px solid #851311;
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+/* END HEADER SETTINGS */
+
+/* BODY SETTINGS */
+
+.wrapper, .container {
+    background-color: #240000;    
+    border: 2px solid #851311;
+    display: flex;
+    justify-content: center;
+}
+
+/* END BODY SETTINGS */
+
+/** MEDIA SETTINGS **/
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+    .nav-top {
+        justify-content: flex-end;
+    }
+
+    .nav-top__list {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+
+
+    .header__image-big {
+        display: none;
+    }
+
+    .header__image-small {
+        display: flex;
+    }
+}
+
+/** END MEDIA SETTINGS **/
+
+
+/* SEARCH & FILTERS SETTINGS */
+
+#search-submit {
+    width: auto;
+    padding: 0;
+    margin:auto;
+}
+/* END SEARCH & FILTERS SETTINGS */

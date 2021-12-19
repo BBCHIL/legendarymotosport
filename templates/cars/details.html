@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+    <link rel="stylesheet" href="{% static 'css/car/details.css' %}">
+    <title> LM: Details </title>
+</head>
+
+<body>
+    
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+
+    <div class="car main">
+
+        <div class="car__container">
+
+            <div class="car__head head">
+                <h2 class="car__name"> {{ car.name }} </h2>
+                <img class="nav-top__user-image" src="{{ car.manufacturer.image.url }}" alt="{{ car.manufacturer.username }}">
+                <h2 class="car__price"> {{ car.price }} </h2>
+            </div>
+
+            <div class="car__wrapper">
+
+                <div class="car__color-description-container">
+                    <p class="car__description"> {{ car.description }} </p>
+                    {% include 'misc/car_colors.html' %}
+
+                </div>
+                
+                <div class="car__image-container image-container">
+                    <img class="car__image image" src="{{ car.image.url }}" alt="Car Image">
+                    {% if car.in_favorites %}
+                        <a class="car__button" href="{% url 'favorite' pk=car.id %}" id="add-favorite-button"> REMOVE FROM FAVORITES </a>
+                    {% else %}
+                        <a class="car__button" href="{% url 'favorite' pk=car.id %}" id="add-favorite-button"> ADD TO FAVORITES </a>
+                    {% endif %}
+
+                    {% if user.is_owner %}
+                        <p class="car__danger-info" id="toggleDanger"> <----- DANGER ZONE -----> </p>
+                        <a class="car__danger btn_" href="{% url 'car-edit' pk=car.pk %}"> EDIT </a>
+                        <a class="car__danger btn_" href="{% url 'car-delete' pk=car.pk %}"> DELETE </a>
+                        <script src="{% static 'js/car/toggle_danger.js' %}"></script>
+                    {% endif %}
+                </div>
+
+                <script src="{% static 'js/car/toggle_favorite_button.js' %}"></script>
+
+            </div>
+        </div>      
+    </div>
+</body>
+</html>

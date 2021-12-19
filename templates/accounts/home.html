@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account/homepage.css' %}">
+    <title> Legendary Motosport </title>
+</head>
+
+<body>
+
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+    
+    <div class="user">
+        <div class="user__container">
+
+            <section class="user__header">
+                <picture class="user__image-container">
+                    <img class="user__image" src="{{ user.image.url }}" onerror="this.src='/static/img/account/user.png';">
+                </picture>
+                <h1 class="user__username"> {{ user.username }} </h1>
+            </section>
+
+            {% if user.is_manufacturer %}  
+
+            <section class="user__options-container">
+                <p class="options__info"> USER OPTIONS </p>
+                <a class="user__link" href="{% url 'myorders' %}"> MY ORDERS </a>
+                <a class="user__link" href="{% url 'account-edit' %}"> EDIT ACCOUNT </a>
+                <a class="user__link" href="{% url 'myfavorites' %}"> MY FAVORITES </a>
+            </section>
+
+            <section class="user__options-container"> 
+                <p class="options___info"> MANUFACTURER OPTIONS </p>
+                <a href="{% url 'car-uploads' %}" class="user__link"> MY UPLOADS </a>
+                <a href="{% url 'car-create' %}" class="user__link"> UPLOAD NEW </a>
+                <a href="{% url 'users-orders' %}" class="user__link"> USERS ORDERS </a>
+            </section>            
+
+            <section class="user__options-container danger-zone">
+                <span> WARNING! <br>
+                    If You delete account all your products, orders and other things, 
+                    linked with your account, will be erased. <br> F O R E V E R <br> 
+                    <span class="jew-info"> (no refunds) </span>
+                </span>
+                <a href="{% url 'account-delete' %}" class="user__link"> DELETE </a>
+            </section>
+            
+            {% elif user.is_active %}
+                                    
+            <section class="user__options-container">
+                <p class="options__info"> USER OPTIONS </p>
+                <a class="user__link" href="{% url 'myorders' %}"> MY ORDERS </a>
+                <a class="user__link" href="{% url 'account-edit' %}"> EDIT ACCOUNT </a>
+                <a class="user__link" href="{% url 'myfavorites' %}"> MY FAVORITES </a>
+            </section>
+
+            <section class="user__options-container">
+                <span> Press this button to become one of us. You will recieve permission to sell your products here, 
+                    we will recieve some percentage from your sellings, and everyone is happy! <br>
+                    <span class="jew-info">  (call us to get more info: 8-800-555-35-35) </span>
+                </span>
+                <a href="{% url 'join-us' %}" class="user__link"> JOIN US </a>
+                <span class="jew-info">  (by pressing this button you accept terms of use and other stuff) </span>
+            </section>
+
+            <section class="user__options-container danger-zone">
+                <span> WARNING! <br>
+                    If You delete account all your products, orders and other things, 
+                    linked with your account, will be erased. <br> F O R E V E R <br> 
+                    <span class="jew-info"> (no refunds) </span>
+                </span>
+                <a href="{% url 'account-delete' %}" class="user__link"> DELETE </a>
+            </section>
+            {% endif %}
+            
+            
+            
+        </div>      
+    </div>
+</body>
+
+</html>

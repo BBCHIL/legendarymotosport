@@ -1,0 +1,82 @@
+/* CAR DETAIL */
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #240000;
+    border: 2px solid #851311;
+    width: 80%;
+    margin-top: -2%;
+    margin-bottom: 5%;
+}
+
+
+.head {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    color: white;
+    font-size: larger;
+    width: 100%;
+}
+
+
+.image-container {
+    width: 100%;
+}
+
+
+.image {
+    width: 100%;
+}
+
+/** BUTTON SETTINGS **/
+button[type=submit] {
+    display: none;
+    width: 95%;
+    background-color: #eb0b0b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/** END BUTTON SETTINGS **/
+
+
+/** MEDIA SETTINGS **/
+
+@media (max-width: 767px) {
+    .wrapper {
+        /* display: flex; */
+        flex-direction: column-reverse;
+    }
+    .head {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

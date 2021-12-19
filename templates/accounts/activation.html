@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account/activation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account/form.css' %}">
+    <title> LM: Activate </title>
+</head>
+<body>
+
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+
+    <div class="activation main">
+        <div class="activation__form inner-wrapper wrapper">
+
+            <div class="activation__image-container image-container">
+                <img class="activation__left-image left-image" src="{% static 'img/account/activate_background.png' %}" alt="No image">
+                <img class="activation__logo-image logo-image" src="{% static 'img/account/logo.png' %}" alt="Legendary Motosport" class="logo">
+            </div>
+
+            <div class="activation__form-container">
+                <form class="activation__form" action="." method="post">
+                    {% csrf_token %}
+                    <h2> Activation </h2>
+                    <h3 class="form__validation-fail"> {{ errors.error }} </h3>
+                    {% if not email %}
+                        <label for="email"> Email </label>
+                        <input class="form__input-data" type="text" name="email" id="email" placeholder="Enter Your email" required>
+                    {% else %}
+                        <h4 class="form__info"> Activation code has been sent to {{ email }}</h4>
+                    {% endif %}
+                    <label for="activation_code"> Activation code </label>
+                    <input class="form__input-data" type="text" name="activation_code" id="activation_code" placeholder="Enter Your activation code" required>
+
+                    <input class="form__submit" type="submit" value="submit">
+                    <br>
+                    <a class="form__resend-code redirect" href="{% url 'resend-activation-code' email %}"> resend activation code </a>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

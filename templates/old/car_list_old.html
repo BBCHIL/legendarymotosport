@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">nk
+    <!-- <link rel="stylesheet" href="/static/css/car/list.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <title>Legendary Motosport</title>
+</head>
+<body>
+
+<div class="intro">
+    <header class="header">
+        <img class="header-image" src="/static/img/header.png" alt="None">
+    </header>
+</div>
+
+
+<div class="car-list">
+    <div class="car-container">
+        {% for car in cars %}
+        <div class="car-wrapper">
+                <a href="{{ car.id }}">
+
+                <div class="car-head">
+                    <h2>{{ car.extra_info }}</h2>
+                    <img class="car-head-user-image" src="/static/img/account/user.png" alt="No Image">
+                </div>
+
+                <div class="car-image">
+                    <img class="car-info-car-image-preview" src="/{{ car.image }}" alt="None">
+                </div>
+                
+                <div class="car-foot">
+                    <p class="car-info-car-name">{{ car.name }}</p>
+                    <p class="car-info-car-price">{{ car.price }}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

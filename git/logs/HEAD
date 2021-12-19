@@ -1,0 +1,61 @@
+0000000000000000000000000000000000000000 9874805b7c06ecf4d94293d3a56a85309d4fadf6 BBCHIL <bogda6ka.bogdan@gmail.com> 1636637192 +0600	commit (initial): before i fucked something up
+9874805b7c06ecf4d94293d3a56a85309d4fadf6 9874805b7c06ecf4d94293d3a56a85309d4fadf6 BBCHIL <bogda6ka.bogdan@gmail.com> 1636637207 +0600	checkout: moving from master to v1.1
+9874805b7c06ecf4d94293d3a56a85309d4fadf6 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636640266 +0600	commit: still working yet
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642576 +0600	reset: moving to HEAD@{0}
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642610 +0600	reset: moving to HEAD@{0}
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642652 +0600	reset: moving to HEAD@{0}
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642687 +0600	reset: moving to HEAD@{0}
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642774 +0600	reset: moving to HEAD@{0}
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642833 +0600	reset: moving to HEAD@{0}
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642837 +0600	reset: moving to HEAD@{0}
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 9874805b7c06ecf4d94293d3a56a85309d4fadf6 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642889 +0600	checkout: moving from v1.1 to master
+9874805b7c06ecf4d94293d3a56a85309d4fadf6 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642965 +0600	checkout: moving from master to v1.1
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636642981 +0600	reset: moving to HEAD
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636644014 +0600	checkout: moving from v1.1 to v1.2
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 550235fac0db3dc90bf5198d161a684587b97dd5 BBCHIL <bogda6ka.bogdan@gmail.com> 1636644034 +0600	commit: car models added
+550235fac0db3dc90bf5198d161a684587b97dd5 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636644044 +0600	checkout: moving from v1.2 to v1.1
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1636644061 +0600	reset: moving to HEAD
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 550235fac0db3dc90bf5198d161a684587b97dd5 BBCHIL <bogda6ka.bogdan@gmail.com> 1636644083 +0600	checkout: moving from v1.1 to v1.2
+550235fac0db3dc90bf5198d161a684587b97dd5 ea908852b1aa2b9ac0247430af2f8dbe02afb22c BBCHIL <bogda6ka.bogdan@gmail.com> 1636702453 +0600	commit: work on car detail started
+ea908852b1aa2b9ac0247430af2f8dbe02afb22c abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 BBCHIL <bogda6ka.bogdan@gmail.com> 1636724239 +0600	commit: going to rewrite http's using BEM
+abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 BBCHIL <bogda6ka.bogdan@gmail.com> 1636724252 +0600	checkout: moving from v1.2 to v1.3
+abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 BBCHIL <bogda6ka.bogdan@gmail.com> 1636729682 +0600	checkout: moving from v1.3 to v1.2
+abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 BBCHIL <bogda6ka.bogdan@gmail.com> 1636962728 +0600	checkout: moving from v1.2 to v1.2
+abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 BBCHIL <bogda6ka.bogdan@gmail.com> 1636962767 +0600	reset: moving to HEAD
+abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 BBCHIL <bogda6ka.bogdan@gmail.com> 1636963168 +0600	reset: moving to HEAD@{4}
+abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 BBCHIL <bogda6ka.bogdan@gmail.com> 1637070218 +0600	checkout: moving from v1.2 to v1.4
+abb7d2a4165371586ac19e76fcd50f3c1cd5bd88 60e74ff0d01f81503bd918b4213a6717e3359313 BBCHIL <bogda6ka.bogdan@gmail.com> 1637070278 +0600	commit: making accounts
+60e74ff0d01f81503bd918b4213a6717e3359313 60e74ff0d01f81503bd918b4213a6717e3359313 BBCHIL <bogda6ka.bogdan@gmail.com> 1637321961 +0600	checkout: moving from v1.4 to v1.5
+60e74ff0d01f81503bd918b4213a6717e3359313 568beae8c0bd00f607111bccfac0db88d308a78e BBCHIL <bogda6ka.bogdan@gmail.com> 1637322590 +0600	commit: rewriting html code
+568beae8c0bd00f607111bccfac0db88d308a78e 568beae8c0bd00f607111bccfac0db88d308a78e BBCHIL <bogda6ka.bogdan@gmail.com> 1637335643 +0600	checkout: moving from v1.5 to v1.6
+568beae8c0bd00f607111bccfac0db88d308a78e eb1f91bde2e683bce3147a3c15f64a90bca6a49f BBCHIL <bogda6ka.bogdan@gmail.com> 1637335693 +0600	commit: car list html/css finished, working on car details
+eb1f91bde2e683bce3147a3c15f64a90bca6a49f eb1f91bde2e683bce3147a3c15f64a90bca6a49f BBCHIL <bogda6ka.bogdan@gmail.com> 1637658140 +0600	checkout: moving from v1.6 to v1.7
+eb1f91bde2e683bce3147a3c15f64a90bca6a49f b8c312f6ac443b5112b2aed513d35140de3ad6fa BBCHIL <bogda6ka.bogdan@gmail.com> 1637658178 +0600	commit: car-detail & car-list html/css finished, proceed to registration
+b8c312f6ac443b5112b2aed513d35140de3ad6fa b8c312f6ac443b5112b2aed513d35140de3ad6fa BBCHIL <bogda6ka.bogdan@gmail.com> 1637837287 +0600	checkout: moving from v1.7 to v1.8
+b8c312f6ac443b5112b2aed513d35140de3ad6fa b8c312f6ac443b5112b2aed513d35140de3ad6fa BBCHIL <bogda6ka.bogdan@gmail.com> 1637837513 +0600	checkout: moving from v1.8 to v1.8
+b8c312f6ac443b5112b2aed513d35140de3ad6fa 398885a2a16efdb6f7f26b3b3070f9218a554d39 BBCHIL <bogda6ka.bogdan@gmail.com> 1637837531 +0600	commit: token in cookies
+398885a2a16efdb6f7f26b3b3070f9218a554d39 398885a2a16efdb6f7f26b3b3070f9218a554d39 BBCHIL <bogda6ka.bogdan@gmail.com> 1637925555 +0600	checkout: moving from v1.8 to v1.9
+398885a2a16efdb6f7f26b3b3070f9218a554d39 311e10a518edafb4cffb02a0e75d26bd5b8301eb BBCHIL <bogda6ka.bogdan@gmail.com> 1637925596 +0600	commit: login done, rewriting templates
+311e10a518edafb4cffb02a0e75d26bd5b8301eb 75a589a0409393161509b23ba9d90ec9c0622ac5 BBCHIL <bogda6ka.bogdan@gmail.com> 1637937169 +0600	commit: making homepage
+75a589a0409393161509b23ba9d90ec9c0622ac5 b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 BBCHIL <bogda6ka.bogdan@gmail.com> 1637937187 +0600	checkout: moving from v1.9 to v1.1
+b559f5f43d03b0505ba49ddb3c14ec48a0d68e23 75a589a0409393161509b23ba9d90ec9c0622ac5 BBCHIL <bogda6ka.bogdan@gmail.com> 1637937390 +0600	checkout: moving from v1.1 to v1.9
+75a589a0409393161509b23ba9d90ec9c0622ac5 75a589a0409393161509b23ba9d90ec9c0622ac5 BBCHIL <bogda6ka.bogdan@gmail.com> 1638186679 +0600	checkout: moving from v1.9 to v1.10
+75a589a0409393161509b23ba9d90ec9c0622ac5 7fee3b5328f4884a01b2e681b72119851aebdf99 BBCHIL <bogda6ka.bogdan@gmail.com> 1638186699 +0600	commit: orders added partically
+7fee3b5328f4884a01b2e681b72119851aebdf99 568beae8c0bd00f607111bccfac0db88d308a78e BBCHIL <bogda6ka.bogdan@gmail.com> 1638186723 +0600	checkout: moving from v1.10 to v1.5
+568beae8c0bd00f607111bccfac0db88d308a78e 7fee3b5328f4884a01b2e681b72119851aebdf99 BBCHIL <bogda6ka.bogdan@gmail.com> 1638186735 +0600	checkout: moving from v1.5 to v1.10
+7fee3b5328f4884a01b2e681b72119851aebdf99 7fee3b5328f4884a01b2e681b72119851aebdf99 BBCHIL <bogda6ka.bogdan@gmail.com> 1638280560 +0600	checkout: moving from v1.10 to v1.11
+7fee3b5328f4884a01b2e681b72119851aebdf99 e94808b17275703064472c79a14ed480cb6bbfbf BBCHIL <bogda6ka.bogdan@gmail.com> 1638280584 +0600	commit: favorites added
+e94808b17275703064472c79a14ed480cb6bbfbf e94808b17275703064472c79a14ed480cb6bbfbf BBCHIL <bogda6ka.bogdan@gmail.com> 1638524625 +0600	checkout: moving from v1.11 to v1.12
+e94808b17275703064472c79a14ed480cb6bbfbf b21dc10c0b8a4ef87acf5f9b023b8214e49e2736 BBCHIL <bogda6ka.bogdan@gmail.com> 1638524650 +0600	commit: going to add slug
+b21dc10c0b8a4ef87acf5f9b023b8214e49e2736 b21dc10c0b8a4ef87acf5f9b023b8214e49e2736 BBCHIL <bogda6ka.bogdan@gmail.com> 1639057001 +0600	checkout: moving from v1.12 to v2.0
+b21dc10c0b8a4ef87acf5f9b023b8214e49e2736 975c6a531e926ad6de5371c175f9bb5ab79b5ad7 BBCHIL <bogda6ka.bogdan@gmail.com> 1639057100 +0600	commit: i forgor💀 what i added
+975c6a531e926ad6de5371c175f9bb5ab79b5ad7 975c6a531e926ad6de5371c175f9bb5ab79b5ad7 BBCHIL <bogda6ka.bogdan@gmail.com> 1639744533 +0600	checkout: moving from v2.0 to v2.1
+975c6a531e926ad6de5371c175f9bb5ab79b5ad7 331eb1fd47150cb75c01d6efbc6498df08a11523 BBCHIL <bogda6ka.bogdan@gmail.com> 1639744594 +0600	commit: car create-delete added
+331eb1fd47150cb75c01d6efbc6498df08a11523 331eb1fd47150cb75c01d6efbc6498df08a11523 BBCHIL <bogda6ka.bogdan@gmail.com> 1639928641 +0600	checkout: moving from v2.1 to v2.2
+331eb1fd47150cb75c01d6efbc6498df08a11523 5fbb6885a917bd92c5f1137010fff1808720ff3f BBCHIL <bogda6ka.bogdan@gmail.com> 1639928685 +0600	commit: saving before deploy changes
+5fbb6885a917bd92c5f1137010fff1808720ff3f d590d3e2de1c6a2aa305d0ac1cd51ccf60e5e3d4 BBCHIL <bogda6ka.bogdan@gmail.com> 1639929665 +0600	commit: small changes
+d590d3e2de1c6a2aa305d0ac1cd51ccf60e5e3d4 d590d3e2de1c6a2aa305d0ac1cd51ccf60e5e3d4 BBCHIL <bogda6ka.bogdan@gmail.com> 1639929679 +0600	checkout: moving from v2.2 to v2.3
+d590d3e2de1c6a2aa305d0ac1cd51ccf60e5e3d4 07664ede7f32f315ae34011550cf52486cd7d98b BBCHIL <bogda6ka.bogdan@gmail.com> 1639930754 +0600	commit: environ added
+07664ede7f32f315ae34011550cf52486cd7d98b 07664ede7f32f315ae34011550cf52486cd7d98b BBCHIL <bogda6ka.bogdan@gmail.com> 1639931108 +0600	checkout: moving from v2.3 to v2.4
+07664ede7f32f315ae34011550cf52486cd7d98b 3ca16583b935b7060fbe4119fb4221937c9b3a99 BBCHIL <bogda6ka.bogdan@gmail.com> 1639931124 +0600	commit: final
+3ca16583b935b7060fbe4119fb4221937c9b3a99 56140e3860b046146b0662f3416280c771d13660 BBCHIL <bogda6ka.bogdan@gmail.com> 1639931149 +0600	commit: final

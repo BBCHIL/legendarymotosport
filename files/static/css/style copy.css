@@ -1,0 +1,115 @@
+body {
+    background: url("/static/img/body_background.png");
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* NAV SETTINGS */
+.nav-top {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    justify-content: space-between;
+    /*! font-size: 20px; */
+}
+
+.nav-top__user-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.nav-top__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    font-size: x-large;
+}
+
+.nav-top__element {
+    float: left;
+}
+
+.nav-top__link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+
+.nav-top__username {
+    font-size: x-large  ;
+    color: white;
+    padding-left: 2px;
+}
+
+.nav-top a:hover {
+    background-color: #111;
+}
+
+.nav-top__user-image {
+    max-height: 69px;
+}
+/* END NAV SETTINGS */
+
+
+/* HEADER SETTINGS */
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__image-big {
+    border-bottom: 2px solid #851311;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header__image-small {
+    border-bottom: 2px solid #851311;
+    width: 100%;
+    display: none;
+    justify-content: center;
+}
+/* END HEADER SETTINGS */
+
+/* BODY SETTINGS */
+
+.wrapper, .container {
+    background-color: #240000;    
+    border: 2px solid #851311;
+}
+
+/* END BODY SETTINGS */
+
+/** MEDIA SETTINGS **/
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 767px) {
+    .header__image-big {
+        display: none;
+    }
+
+    .header__image-small {
+        display: flex;
+    }
+}
+
+/** END MEDIA SETTINGS **/

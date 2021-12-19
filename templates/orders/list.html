@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/order/list.css' %}">
+    <title> Legendary Motosport </title>
+</head>
+
+<body>
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+
+
+    <div class="order">
+        <h1 class="order__intro"> MY ORDERS </h1>
+
+        <div class="order__container">
+            {% for order in orders %}
+            <div class="order__wrapper">
+                <a href="{% url 'order-details' pk=order.id %}">
+
+                    <div class="order__head">
+                        <h2> {{ order.color }} </h2>
+                        <img class="order__head-image" src="{{ order.car.manufacturer.image.url }}" alt="{{ order.manufacturer.username }}">
+                    </div>
+
+                    <div class="order__image-container">
+                        <img class="order__image" src="{{ order.car.image.url }}" alt="Car Image">
+                    </div>
+
+                    <div class="order__foot">
+                        {% if user.is_manufacturer %}
+                            <p class="order__name">{{ order.user.email }}</p>
+                        {% else %}
+                            <p class="order__name">{{ order.car.name }}</p>
+                        {% endif %}
+                        <p class="order__status">{{ order.status }}</p>
+                    </div>
+
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+.register {
+    display: flex;
+    justify-content: center;
+}
+
+
+.register__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+    width: 80%;
+    margin-top: -2%;
+    border: 2px solid #851311;
+}
+
+
+/* IMAGE SETTINGS */
+.register__image-container { 
+    float: left; 
+    position: relative; 
+} 
+
+
+.register__logo-image { 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 40%;
+} 
+/* END IMAGE SETTINGS */
+
+
+/* FORM SETTINGS */
+
+input[type=submit] {
+    width: 95%;
+    background-color: #eb0b0b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.form__input-data {
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form__validation-fail {
+    color: yellow;
+    margin: 0;
+    background: black;
+    border: solid 1px white;
+    font-size: small;
+    padding: inherit;
+    width: 75%;
+} 
+
+/* END FORM SETTINGS */
+
+
+
+/* 
+.form-data-placeholder {
+    background: rgba(128, 0, 0, 1);
+
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    border: 1px solid yellow;
+}
+
+
+
+
+
+.left-image {
+    opacity: 0.85;
+    height: 100%;
+    width: fit-content;    
+    max-width: 560px;
+}
+
+
+.logo-image {
+    width: 200px;
+    height: auto;
+    position: relative;
+    left: -26%;
+    top: -75%;
+}
+
+
+.left-image-container {
+    margin-right: -201px;
+}
+
+
+input[type=submit] {
+    width: 95%;
+    background-color: #eb0b0b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.bi {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+.input-data {
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.validation-fail {
+    color: yellow;
+    margin: 0;
+    background: black;
+    border: solid 1px white;
+    font-size: small;
+    padding: inherit;
+    width: 75%;
+} */

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/car/create.css">
+    <title> LM: Car Create</title>
+</head>
+<body>
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+
+    <div class="car">
+        <div class="car__container">
+            <div class="car__form-container container">
+                <form class="car__form" action="." method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h2> Create New Car </h2>
+
+                    <h3 class="form__validation-fail"> {{ errors.other }} </h3>
+                    
+                    <label for="name"> Car Name </label>
+                    <p class="form__validation-fail"> {{ errors.name }} </p>
+                    <input class="form__input-data" type="text" name="name" id="name" placeholder="Enter car name" required>
+                    
+                    <label for="description"> Description </label>
+                    <p class="form__validation-fail"> {{ errors.description }} </p>
+                    <input class="form__input-data" type="text" name="description" id="description" placeholder="Enter car description" required>
+                    
+                    <label for="price"> Price </label>
+                    <p class="form__validation-fail"> {{ errors.price }} </p>
+                    <input class="form__input-data" type="number" name="price" id="price" placeholder="Enter car price" required> 
+
+                    <label for="form-image"> Car Image </label>
+                    <p class="form__validation-fail"> {{ errors.image }} </p>
+                    <input class="form__input-data" type="file" name="image" id="form-image" accept=".jpg, .jpeg, .png" onchange="loadFile(event)" required>
+
+                    <input class="form__submit" type="submit" value="submit">
+                </form>
+            </div>
+
+            <div class="car__image-container">
+                <img class="car__image" id="output">
+                <img class="car__logo-image" id="logo-output" src="/static/img/account/logo.png">
+            </div>
+            <script src="/static/js/car/toggle_image.js"></script>
+        </div>
+    </div>
+</body>
+</html>

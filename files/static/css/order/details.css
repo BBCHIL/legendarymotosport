@@ -1,0 +1,17 @@
+.order__wrapper {
+    border-top: 2px solid #851311;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+}
+
+.order__button {
+    width: 90%;
+}
+
+@media (max-width: 767px) {
+    .order__wrapper {
+        flex-direction: column-reverse;
+    }
+    
+}

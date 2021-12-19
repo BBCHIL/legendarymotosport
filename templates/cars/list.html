@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/car/list.css">
+    <link rel="stylesheet" href="/static/css/account/form.css">
+    <title> Legendary Motosport </title>
+</head>
+
+<body>
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+
+
+    <div class="car__body">
+        
+
+        <div class="car__list">
+
+            {% if include_search %}
+                <div class="car__container-header">
+                    <div class="searchfield">
+                        <form action="{% url 'car-search-init' %}" method="post">
+                            <input type="text" name="search" id="search__input" title="I'm looking for...">
+                            <label for="search"><input type="submit" name="search-submit" id="search-submit" value="Search"></label>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+
+            <div class="car__container">
+                
+                {% for car in cars %}
+                <div class="car__wrapper">
+                    
+                    <div class="car__head">
+                        {% if user.is_active %}
+                            {% if car.like_exists %}
+                                <a href="{% url 'like' pk=car.id %}" class="car__like-btn"> <img class="car__like-icon" src="/static/img/likes/like.png" alt="Like"> </a>
+                            {% else %}
+                                <a href="{% url 'like' pk=car.id %}" class="car__like-btn"> <img class="car__like-icon" src="/static/img/likes/no-like.png" alt="No Like"> </a>
+                            {% endif %}
+                        {% else %}
+                            <a class="car__like-btn"><img class="car__like-icon" src="/static/img/likes/non-available-heart.png" alt="Like"></a>
+                        {% endif %}
+                        <span class="car__likes"> {{ car.like_count }} </span>
+                        <img class="car__head-image" src="{{ car.manufacturer.image.url }}" onerror="this.src='/static/img/account/user.png'" alt="No Image">
+                    </div>
+                    
+                    <a href="{% url 'car-detail' pk=car.id %}">
+                        <div class="car__image-container">
+                            <img class="car__image" src="{{ car.image.url }}" alt="None">
+                        </div>
+
+                        <div class="car__foot">
+                            <p class="car__name"> {{ car.name }} </p>
+                            <p class="car__price"> {{ car.price }} </p>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

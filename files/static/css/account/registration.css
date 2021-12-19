@@ -1,0 +1,14 @@
+.register {
+    display: flex;
+    justify-content: center;
+}
+
+
+.register__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 80%;
+    margin-top: -2%;
+    border: 2px solid #851311; 
+}

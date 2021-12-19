@@ -1,0 +1,130 @@
+
+/* CAR LIST */
+
+.car__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.car__container-header {
+    border: 2px solid #851311;
+    border-bottom: 0;
+    background: #240000;
+    margin-bottom: 2%;
+    justify-content: space-between;
+    width: 80%;
+    display: flex;
+    align-self: center;
+}
+
+.car__list {
+    margin-top: -3%;
+    /* width: 80%;
+    background: #240000;
+    border: 2px solid #851311;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.car__container {
+    margin-top: -2%;
+    width: 80%;
+    background: #240000;
+    border: 2px solid #851311;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.car__wrapper {
+    border: white 2px solid;
+    max-width: 30%;
+    height: auto;
+    margin: 1% 1%;
+    background-color: black;
+}
+
+
+/* CAR LIST MEDIA SETTINGS*/
+
+@media (max-width: 1200px) {
+    .car__wrapper {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    .car__wrapper {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    .car__wrapper {
+        max-width: none;
+    }
+}
+
+/* END CAR LIST MEDIA SETTINGS*/
+
+
+.car__head {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    max-height: 12%;
+    border-bottom: solid #5f4f4f;
+}
+
+
+.car__likes {
+    margin-right: auto;
+}
+
+.car__like-icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+.car__head-image {
+    float: right;
+    width: 20%;
+    height: auto;
+}
+
+.car__image {
+    width: 100%;
+}
+
+
+
+.car__foot {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    justify-content: space-between;
+}
+
+
+.car__price {
+    background-color: #9b0001;
+    border: 1px #650a05 solid;
+    /* font-size: 85%; */
+    margin: inherit;
+    vertical-align: middle;
+    align-content: center;
+    display: inline-grid;
+}
+
+/* END CAR LIST */

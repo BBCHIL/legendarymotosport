@@ -1,0 +1,156 @@
+/* CAR DETAIL */
+/* .car {
+    display: flex;
+    justify-content: center;
+} */
+
+
+.car__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #240000;
+    border: 2px solid #851311;
+    width: 80%;
+    margin-top: -2%;
+    margin-bottom: 5%;
+}
+
+
+/* .car__head {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+} */
+
+
+.car__wrapper {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid #851311;
+    /* justify-content: space-around; */
+    padding: 1%;
+}
+
+
+.car__description {
+    color: white;
+    font-size: large;
+}
+
+
+.car__form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.car__color-info {
+    color: white;
+    font-size: large;
+}
+
+.car__color-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+    width: 100%;
+}
+
+
+.car__color-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.car__image-container {
+    width: 100%;
+}
+
+
+.car__image {
+    width: 100%;
+}
+
+/** BUTTON SETTINGS **/
+button[type=submit], .car__button {
+    display: none;
+    width: 95%;
+    background-color: #eb0b0b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#add-favorite-button {
+    width: auto;
+    justify-content: center;
+}
+/** END BUTTON SETTINGS **/
+
+
+/** MEDIA SETTINGS **/
+
+@media (max-width: 767px) {
+    .car__wrapper {
+        flex-direction: column-reverse;
+    }
+
+}
+
+/** END MEDIA SETTINGS **/
+
+
+/** RADIO SETTINGS **/
+
+/*** ROUND OUTLINE ***/
+.car__color-choice-image {
+    border-radius: 100%;
+}
+
+/*** HIDE RADIO ***/
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*** IMAGE STYLES ***/
+[type=radio] + img {
+    height: 35px;
+    width: auto;
+    margin: 20px 20px 0px;
+    cursor: pointer;
+}
+
+/*** CHECKED STYLES ***/
+[type=radio]:checked + img{
+    outline: 5px solid gray;
+    outline-offset: -3px;
+}
+
+/** END RADIO SETTINGS **/
+
+
+/* DANGER ZONE (EDIT/DELETE) */
+.car__danger {
+    display: none;
+}
+
+.car__danger-info {
+    text-align: center; 
+    color: white;
+    cursor: pointer;
+}
+
+/* END DANGER ZONE */
+
+/* END CAR DETAIL */
