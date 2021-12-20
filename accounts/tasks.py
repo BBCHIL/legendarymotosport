@@ -5,7 +5,7 @@ from legendarymotosports._celery import app
 
 # ********** EMAIL FUNCS ********** #
 
-@app.task
+
 def send_activation_code(email, activation_code):
     title = "Welcome to Legendary Motosport!"
     msg = (

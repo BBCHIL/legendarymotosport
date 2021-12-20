@@ -159,7 +159,7 @@ class ResendActivationCodeView(APIView):
             user = CustomUser.objects.get(email=email)
         except ObjectDoesNotExist:
             return HttpResponseNotFound("User does not exists")
-        send_activation_code.delay(user.email, user.activation_code)
+        send_activation_code(user.email, user.activation_code)
         return redirect('activate-by-form', email=user.email)
 
 
