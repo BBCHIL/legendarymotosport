@@ -1,4 +1,3 @@
-import re
 from django.core.exceptions import ObjectDoesNotExist
 from accounts.models import CustomUser
 from accounts.utils import get_user

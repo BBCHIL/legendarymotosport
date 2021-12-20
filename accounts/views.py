@@ -1,4 +1,4 @@
-from re import X
+
 from django.http.response import HttpResponseBadRequest, HttpResponseNotFound
 from django.shortcuts import redirect
 from django.core.exceptions import ObjectDoesNotExist
@@ -48,7 +48,7 @@ class RegistrationView(APIView):
         user = CustomUser.objects.create_user(
             **serializer.validated_data
         )
-        send_activation_code(user.email, user.activation_code)
+        send_activation_code.delay(user.email, user.activation_code)
         return redirect('activate-by-form', user.email)
 
 
@@ -159,13 +159,14 @@ class ResendActivationCodeView(APIView):
             user = CustomUser.objects.get(email=email)
         except ObjectDoesNotExist:
             return HttpResponseNotFound("User does not exists")
-        send_activation_code(user.email, user.activation_code)
+        send_activation_code.delay(user.email, user.activation_code)
         return redirect('activate-by-form', email=user.email)
 
 
 class FavoriteCarListView(APIView):
     template_name = 'cars/list.html'
     serializer_class = CarSerializer
+    permission_classes = [TokenPermission, ]
 
     def get(self, request):
         user = get_user(request)
@@ -208,7 +209,7 @@ class AccountEditView(APIView):
 
 
 class AccountDeleteView(APIView):
-
+    permission_classes = [TokenPermission, ]
     def get(self, request):
         from django.contrib.auth.models import AnonymousUser
         user = get_user(request)
@@ -222,11 +223,6 @@ class AccountDeleteView(APIView):
 
 
 class BecomeManufacturerView(APIView):
-    """
-    User push button -> Email sents to admin -> 
-    Admin decide to accept or decline the request ->
-    Response sent to user Email.
-    """
     permission_classes = [TokenPermission, ]
     def get(self, request):
         user = get_user(request)

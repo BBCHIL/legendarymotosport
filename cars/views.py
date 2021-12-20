@@ -1,5 +1,4 @@
 from django.core.exceptions import ObjectDoesNotExist
-from django.db.models.deletion import PROTECT
 from django.http.response import HttpResponse, HttpResponseBadRequest
 from django.shortcuts import redirect
 from rest_framework import views

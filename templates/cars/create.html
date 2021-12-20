@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/car/create.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/car/create.css' %}">
     <title> LM: Car Create</title>
 </head>
 <body>
@@ -43,9 +44,9 @@
 
             <div class="car__image-container">
                 <img class="car__image" id="output">
-                <img class="car__logo-image" id="logo-output" src="/static/img/account/logo.png">
+                <img class="car__logo-image" id="logo-output" src="{% static 'img/account/logo.png' %}">
             </div>
-            <script src="/static/js/car/toggle_image.js"></script>
+            <script src="{% static 'js/car/toggle_image.js' %}"></script>
         </div>
     </div>
 </body>

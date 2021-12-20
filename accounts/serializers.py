@@ -1,5 +1,5 @@
 from django.contrib.auth.hashers import check_password
-from django.core.exceptions import ObjectDoesNotExist, SuspiciousFileOperation, ValidationError
+from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import serializers
 from accounts.models import CustomUser
 from accounts.utils import get_user
