@@ -1,0 +1,27 @@
+<nav class="nav-top">
+    <ul class="nav-top__list">
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'homepage' %}"> HOME </a></li>
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'cars' %}"> CARS </a></li>
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'register' %}"> REGISTER </a></li>
+    </ul>
+
+    <div class="nav-top__hamburger-menu">
+        
+    <input id="menu__toggle" type="checkbox" />
+
+    <label class="menu__btn" for="menu__toggle">
+        <span class="menu__arrow"> ᗐ </span>
+        <p class="nav-top__username">{{ user.username }}</p>
+        <img class="nav-top__user-image" src="{{ user.image.url }}" onerror="this.src='/static/img/account/user.png';">
+    </label>  
+
+    <ul class="menu__box">
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'homepage' %}"> HOME </a></li>
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'cars' %}"> CARS </a></li>
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'register' %}"> REGISTER </a></li>
+    </ul>
+    {% load static %}
+    <script src="{% static 'js/account/login_or_logout.js' %}"></script>
+
+    </div>
+</nav>

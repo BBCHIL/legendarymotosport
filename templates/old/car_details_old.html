@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/car/car_detail.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Legendary Motosport</title>
+</head>
+<body>
+
+<div class="intro">
+    <header class="intro header">
+        <img class="header-image" src="/static/img/header.png" alt="None">
+    </header>
+</div>
+
+
+<div class="car page">
+
+    <div class="car car-wrap">
+        
+            <div class="car car-head">
+                <img src="/static/img/body_background.png" alt="None" class="car-info-car-manufacturer-img">
+                <h2 class="car car-name">{{ car.name }}</h2>
+                <h2 class="car car-price">{{ car.price }}</h2>
+            </div>
+            <div class="car car-inner-container">
+                <div class="car car-description-container">
+                    <p class="car car-description">{{ car.description }}</p>
+                    
+                    <form class="car car-form" id="create-car-form" action='.' method="POST" novalidate>
+                        <div class="car car-color-container">
+                            <p class="car-color-container color-info-description">SELECT FROM AVAILABLE COLORS TO ORDER</p>
+                            <div class="car-color-container inner-color-container">
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-red" value="red">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/red-circle.png">
+                                </label>
+
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-pink" value="pink">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/pink-circle.png">
+                                </label>
+
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-yellow" value="yellow">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/yellow-circle.png">
+                                </label>
+
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-orange" value="orange">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/orange-circle.png">
+                                </label>
+
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-green" value="green">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/green-circle.png">
+                                </label>
+
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-blue" value="blue">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/blue-circle.png">
+                                </label>
+
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-black" value="black">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/black-circle.png">
+                                </label>
+
+                                <label>
+                                    <input class="car-color-choice" type="radio" name="color" id="color-choice-white" value="white">
+                                    <img class="radio car-color-image" src="/static/img/cars/radio/white-circle.png">
+                                </label> 
+                            </div>
+
+                            <button class="btn car-submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="car car-image-container"> 
+                    <img class="car car-image" src="/{{ car.image }}" alt="None">
+                </div>
+                
+            </div>
+            <div class="car-foot">
+                <p class="car-info-car-price">{{ car.price }}</p>
+    </div>
+</div>
+
+</body>
+</html>

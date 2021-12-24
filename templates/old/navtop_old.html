@@ -1,0 +1,14 @@
+<nav class="nav-top">
+    <ul class="nav-top__list">
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'homepage' %}"> HOME </a></li>
+        <li class="nav-top__element"><a class="nav-top__link" href="{% url 'cars' %}"> CARS </a></li>
+        <li class="nav-top__element"><a class="nav-top__link" href=""> CONTACT </a></li>
+        <li class="nav-top__element"><a class="nav-top__link" href=""> ABOUT </a></li>
+    </ul>
+    <a class="nav-top__link" href="{% url 'homepage' %}">
+        <div class="nav-top__user-container">
+            <p class="nav-top__username">{{ user.username }}</p>
+            <img class="nav-top__user-image" src="/{{ user.image }}" onerror="this.src='/static/img/account/user.png';">
+        </div>
+    </a>
+</nav>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/details.css' %}">
+    <link rel="stylesheet" href="{% static 'css/order/details.css' %}">
+    <title> LM: Details </title>
+</head>
+
+<body>
+    
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+
+    <div class="order main">
+
+        <div class="order__container container">
+            
+            <div class="order__head head">
+                <h2 class="order__name"> {{ order.car.name }} </h2>
+                <h2 class="order__status"> STATUS: {{ order.status }} </h2>
+            </div>
+
+            <div class="order__wrapper">
+
+                <div class="order__description info-container">
+
+                    {% if user.is_manufacturer and user.is_owner %}
+                        {{ text_info }}
+                        <a class="order__button btn_" href="{% url 'order-next-status' pk=order.id %}"> NEXT STATUS </a> 
+                        <a class="order__button btn_" href="{% url 'order-previous-status' pk=order.id %}"> PREVIOUS STATUS </a> 
+                    {% endif %}
+
+                    {% if user.is_ordered_by %}
+                        <p> 
+                            By pressing this button You confirm, that the product you ordered is arrived to You, 
+                            has no defects and match the description. Otherwise contact the manufacturer. <br>
+                            <span class="jew-info"> please do not contact us we can't do anything about it </span>
+                        </p>
+                        <a class="order__button btn_" href="{% url 'order-delete' pk=order.id %}"> CONFIRM DELIVERY  </a>
+                    {% endif %}
+
+                </div>
+                
+                <div class="order__image-container image-container">
+                    <img class="order__image image" src="{{ order.car.image.url }}" alt="No Image">
+                </div>
+
+            </div>
+        </div>      
+    </div>
+</body>
+</html>

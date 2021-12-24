@@ -1,0 +1,8 @@
+django
+psycopg2-binary
+djangorestframework
+pillow
+celery
+django-filter
+django-environ
+redis

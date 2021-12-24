@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account/registration.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account/form.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title> LM: Register </title>
+</head>
+<body>
+
+    {% include 'misc/navtop.html' %}
+    {% include 'misc/header.html' %}
+
+    
+    <div class="register">
+
+        <div class="register__wrapper wrapper">
+
+            <div class="register__image-container image-container">
+                <img class="register__left-image left-image" src="{% static 'img/account/register_background.jpg' %}" alt="No image">
+                <img class="register__logo-image logo-image" src="{% static 'img/account/logo.png' %}" alt="Legendary Motosport">
+            </div>
+
+            <div class="register__form-container">
+                <form class="register__form" action="." method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <h2>Sign Up</h2>
+                    <h3 class="form__validation-fail"> {{ errors.other }} </h3>
+                    <label for="email">Email</label>
+                    <p class="form__validation-fail"> {{ errors.email }} </p>
+                    <input class="form__input-data" type="email" name="email" id="email" placeholder="Enter Your email" required>
+                    
+                    <label for="username">Username</label>
+                    <p class="form__validation-fail"> {{ errors.username }} </p>
+                    <input class="form__input-data" type="text" name="username" id="username" placeholder="Enter Your username" required>
+
+                    <label for="password">Password</label>
+                    <i class="bi bi-eye-slash togglePassword"></i>
+                    <p class="form__validation-fail"> {{ errors.password }} </p>
+                    <input class="form__input-data password" type="password" name="password" id="password" placeholder="Enter Your password" pattern=".{8,}" required title="8 characters minimum">
+
+                    <label for="password_confirm">Password confirm</label>
+                    <i class="bi bi-eye-slash togglePassword"></i>
+                    <p class="form__validation-fail"> {{ errors.password }} </p>
+                    <input class="form__input-data password" type="password" name="password_confirm" id="password_confirm" placeholder="Enter Your password again" pattern=".{8,}" required title="8 characters minimum"> 
+                    
+                    <label for="form-image">Preview image (Optional)</label>
+                    <p class="form__validation-fail"> {{ errors.image }} </p>
+                    <input class="form__input-data" type="file" name="image" id="form-image" accept=".jpg, .jpeg, .png">
+
+                    <input class="form__submit" type="submit" value="submit">
+                    
+                    <p class="jew-info"> By pressing submit button You accept our
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> Terms of use </a>
+                    </p>
+
+                    <script src="{% static 'js/account/toggle_password.js' %}"></script>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
