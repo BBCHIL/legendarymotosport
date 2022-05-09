@@ -28,10 +28,11 @@ class CarListView(APIView):
         cars = Car.objects.all()
         user = get_user(request)
         self.serializer_class.prepare_render(cars, many=True, user=user)
-        response_data = dict(
-            cars=cars, user=user,
-            include_search=True,
-        )
+        response_data = {
+            "cars": cars, 
+            "user":user,
+            "include_search": True,
+        }
         return Response(data=response_data)
 
 
@@ -85,8 +86,8 @@ class CarCreateView(views.APIView):
 
     def get(self, request):
         user = get_user(request)
-        response_data = dict(
-            user=user,
+        response_data = {
+            "user": user,
         )
         return Response(data=response_data)
     
@@ -109,8 +110,8 @@ class CarEditView(APIView):
 
     def get(self, request, pk):
         user = get_user(request)
-        response_data = dict(
-            user=user,
+        response_data = {
+            "user": user,
         )
         return Response(data=response_data)
     
@@ -119,9 +120,9 @@ class CarEditView(APIView):
         user = get_user(request)
         data = self.serializer_class.get_data(request)
         serializer = self.serializer_class(data=data)
-        response_data = dict(
-            user=user,
-        )
+        response_data = {
+            "user": user,
+        }
         if not serializer.is_valid():
             response_data['errors'] = serializer.validation_errors
             return Response(data=response_data)
