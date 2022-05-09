@@ -30,7 +30,7 @@ class CarListView(APIView):
         self.serializer_class.prepare_render(cars, many=True, user=user)
         response_data = {
             "cars": cars, 
-            "user":user,
+            "user": user,
             "include_search": True,
         }
         return Response(data=response_data)
